@@ -1,16 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<h2 v-if="num === 0">The number is zero</h2>
+<h2 v-else-if="num < 0">The number is negative</h2>
+<h2 v-else-if="num > 0">The number is postive</h2>
+<h2 v-else>Not a number</h2>
+
+
+<template v-if="display">
+<h2>Vishwas</h2>
+<h2>Code</h2>
+<h2>Vue</h2>
+</template>
+
+<h2 v-show="showElement">Using V-show</h2>
+<h2 v-if="showElement">Using V-if</h2>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+        num:"a",
+        display: true,
+        showElement: false,
+    }
+  },
 }
 </script>
 
